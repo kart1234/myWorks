@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="/static/css/header/clublocator.css">
+<script src="/static/js/header/clublocatorFunctionality.js"></script>
+
+	<div id="clubLocator" ng-controller="clubLocatorController">
+		<div class="clublocator-wrapper dropdown">
+			<a href="#" ng-click="toggleClubFinderPopup()">
+				<span class="club-locator">YOUR CLUB</span>
+				<span class="club-name-selected">Bentonville, AK</span>
+			</a>
+		</div>
+
+				
+
+		<div class="club-locator-flyout" ng-show="showFlyout">
+
+
+			<!-- If Club Already selected  -->
+			<div class="close-flyout" ng-show="!showAutoSelect">
+				<a ng-click="toggleClubFinderPopup()" href="#">×</a>
+			</div>
+
+			<div class="club-auto-select" ng-show="showAutoSelect">
+				<h3 class="auto-select-msg">We found a club near you!</h3>
+				<div class="question">Did we make a mistake?</div>
+				<a href="#" class="linkcolor" ng-click="showClubFinderView()">Choose another club</a>
+			</div>
+				<!-- If Club Already selected // -->	
+			
+			 	{{> clubLocator/selectedClub}}
+			
+			
+			<div class="clubFind anonymous-user">
+
+			<!-- If Club not selected / Anonymous user  -->
+			<div class="availability-msg" ng-show="showSetClub">Set club to view price and availability</div>
+
+			<!-- If Club not selected / Anonymous user  -->
+
+			<div class="clubFind anonymous-user" ng-show="showClubFinder">
+				<h4 class="fly-heading">Find a Club</h3>
+				<!-- Added back -->
+				<div class="usr-msg">Choose a club to see even bigger collection of items and amazing club prices.</div>
+				<form name="myForm" class="set-club">
+					<div class="formFieldElement error-zip">
+						<label for="clubRef" class="lblWMLTxt" >Zip code or city and State</label>
+						<input type="text" name="zip" ng-model="zipCode" class="club-ref form-control" id="clubRef" ng-keydown="findClubSubmit($event)" />
+						<div class="btn btn-blue" data-ng-click="findClub()">Find a Club</div>
+
+						<div class="error-msg" ng-show="hasError">No clubs found</div>
+						<div class="error-msg" ng-show="zipHasError">Invalid Zip Code</div>
+
+						<div class="btn-group miles-group" ng-show="showClubs||hasError||zipHasError">
+						  <a class="dropdown-toggle miles-selected" data-toggle="dropdown" aria-expanded="false">
+						   within <span class="milesValue">{[{milesList.selected}]}</span> miles <span class="caret caret-sams"></span>
+						  </a>
+						  <ul class="dropdown-menu miles-list-item" role="menu">
+						    <li ng-repeat="mile in milesList.values" ng-show="milesList.selected!==mile"><a ng-click="changeMiles(mile)" href="#">
+						    	{[{mile}]} miles</a></li>
+						  </ul>
+
+						</div>
+						<div class="success-msg" ng-if="showClubs"> We found {[{clubsCount}]} Club near you</div>
+
+					</div>
+				</form>
+			</div>
+			<!-- If Club not selected / Anonymous user  -->
+
+
+			
+			<div class="club-list"  ng-show="showClubs|| hasPrimaryClub"> 
+			 	{{> clubLocator/clubFinder}}
+			</div> 		
+			<a href="javascript:void(0)" ng-show="hasPrimaryClub" class="show-more-clubs" ng-click="showClubFinderView()">Find other clubs</a>
+		</div>
+
+	</div>
+
+<script src="/static/js/header/clublocator.js"></script>

@@ -1,0 +1,17 @@
+		<div class="address-wrapper">
+				<div class="address-card" ng-repeat="club in clubData| orderBy:'miles' |limitTo:clubDisplayLimit">
+					<address>
+						<div class="club-name"><span class="clubnm">{[{club.clubName}]}</span><div class="miles-label">{[{club.miles}]} miles</div></div> 
+						<div class="club-address">
+							{[{club.address.streetAddress}]} <br />
+							{[{club.address.city}]}, {[{club.address.state}]}, {[{club.address.zipcode}]}<br />
+							
+						</div>
+						<a href="#" class="mk-dflt" ng-click="makeClub(club.clubName,club.clubID)">Make this your club</a>
+					</address>
+
+
+				</div>
+				<a href="javascript:void(0)" ng-if="clubDisplayLimit<clubsCount && !hasPrimaryClub" class="show-more-clubs" ng-click="showMoreClubs()">Show more clubs</a>
+				
+		</div>

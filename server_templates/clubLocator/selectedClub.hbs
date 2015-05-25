@@ -1,0 +1,53 @@
+	<div ng-show="hasPrimaryClub">
+
+	<div class="srv-error-msg" ng-show="clubDetailsSrvErr">
+		{[{selectedClub.description}]}
+	</div>
+
+	<div class="primary-club" ng-show="!clubDetailsSrvErr">
+		<span class="label-text">YOUR CLUB</span>
+
+		<!--<h4 class="club-name-selected">Bentonville Sam's Club new</h4>-->
+		<h4>{[{selectedClub.clubName}]}</h4>
+				
+		<a href="" ng-click="showClubTimingFunction()"><span>Open till </span><time datetime="20:30">8.30pm</time> <span>today</span> <span class="caret caret-sams"></span></a>
+
+
+	</div>
+
+	<div class="info-group" ng-show="!clubDetailsSrvErr">
+
+		<address>	
+			<div>
+				<div>{[{selectedClub.address.streetAddress}]}<br />
+				{[{selectedClub.address.city}]}, {[{selectedClub.address.state}]}
+				<span ng-model="zipCodeValue"> {[{selectedClub.address.zipcode}]} </span><br />
+				{[{selectedClub.address.phone}]} <br />
+				</div>
+			</div>			
+		</address>
+			
+		<div clas="info-link">
+				<a href="#" class="view-club-info" ng-click="showClubInfoFunction()">View club info</a>
+				<a href="#" ng-click="showClubFinderView()">Change club</a>
+				<a href="#">Club directions</a>
+		</div>
+
+		<div class="store-time" ng-show="showClubTiming">
+			<div>
+				Monday &dash; Friday: {[{selectedClub.regularHours[0].hours}]}<br />
+				Saturday: {[{selectedClub.regularHours[5].hours}]}<br />
+				Sunday: {[{selectedClub.regularHours[6].hours}]}<br />
+			</div>  <br />
+
+			<div>
+				More hours for Business &amp; Plus members <br />
+				M-F: {[{selectedClub.goldenHours[0].hours}]} <br />
+				Sat: {[{selectedClub.goldenHours[5].hours}]} <br />
+			</div>
+		</div>
+		<br />
+	</div>
+
+	<h4 class="fly-heading">Nearest Club</h4>
+</div>

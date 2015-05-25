@@ -1,0 +1,71 @@
+<link href="/static/css/header/header.css" rel="stylesheet">
+
+<script src="/static/common_components/flyout/flyout.js"></script>
+<script src="/static/js/header/header.js"></script>
+
+<header ng-controller="SamsHeaderCtrl as samsHeaderCtrl">
+		<nav class="upperNav col-md-12">
+			<a href="#" class="pull-left padL16 messagePromo" id="globalMsgLeft" tabindex="2">Try <span class="strong">Easy Reorder</span> today</a>
+			<a href="#" class="pull-right padR16 messageGlobal strong" id="globalMsgRight" tabindex="1">Join or Renew</a>
+		</nav>
+		
+		<!-- sNB - Nav bar Items-->
+		<nav class="lowerNav col-md-12">
+			<ul class="lowerNavItems clearfix" id="headerNavList">
+				<li tabindex="3" class="navItem">
+					<a class="btnLogo navLink" id="navLogo" href="#" title="SamsClub.com Home">
+						<span class="header-sprite icon-logo"></span>
+					</a>
+				</li>
+				<li tabindex="4" class="navItem">
+					<a class="btnShop navLink" id="navShop" ng-click="samsHeaderCtrl.showShopFlyout()">
+						<span class="header-sprite icon-shop"></span>
+						<span>shop</span>
+					</a>
+					{{> header/header_shop}}
+				</li>
+				<li tabindex="5" class="navItem" >
+					<a class="btnBusiness navLink" id="navBusiness" ng-click="samsHeaderCtrl.showBusinessFlyout()">
+						<span class="header-sprite icon-business"></span>
+						business
+					</a>
+					{{> header/header_business}}
+				</li>
+				<li tabindex="6" class="navItem">
+					<a class="btnServices navLink" id="navServices" ng-click="samsHeaderCtrl.showServicesFlyout()">
+						<span class="header-sprite icon-services"></span>
+						services
+					</a>
+					{{> header/header_services}}
+				</li>
+				<li class="navItem">
+					<form id="search" class="samsSearch" tabindex="7">
+						<input type="text" class="search" placeholder="Search">
+					</form>
+				</li>
+				<li class="flexiWidth navItem" tabindex="8">
+					
+					<a class="samsClubLocator navLink" id="navClubLocator">
+						<span class="header-sprite icon-locator"></span>
+							<span class="clubName">Your Club</span>
+							<span class="clubLocation">Concord, CA</span>
+					</a>
+					{{> clubLocator/clubDisplay}}
+				</li>
+				<li class="flexiWidth navItem" tabindex="9">
+
+					<a class="samsClubLocator navLink" id="navMember">
+						<span class="header-sprite icon-user"></span>
+							<span class="clubName">Welcome</span>
+							<span class="clubLocation">Heisenberg</span>
+					</a>
+				</li>
+				<li tabindex="10" class="navItem lastNavItem">
+					<a class="header-sprite samsClubCart navLink" id="navCart">
+						999
+					</a>
+				</li>
+			</ul>
+		</nav>
+</header>
+
