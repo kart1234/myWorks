@@ -1,0 +1,453 @@
+
+/* This style is for Club Locator module */
+@font-face {
+  font-family: bitter;
+  src: url(/static/fonts/bitter-regular.otf);
+}
+
+
+
+// Variables
+@blue: #1574ff;
+@darkblue: #0c55c1;
+@green: #01cca6;
+@darkgreen: #02a587;
+@gray: #e9e7e2;
+@darkgray: #363636;
+@fadedwhite: #f8f8f8;
+@red:#d0021b;
+@black:#000;
+
+
+.close-flyout{    
+    /*border-bottom: 1px solid #eee;*/
+    float: left;
+    height: 40px;
+    padding: 15px;
+    width: 100%;   
+}   
+.close-flyout > a {   
+    display: block;   
+    float: right;   
+    font-size: 20px;    
+    height: 18px;   
+    line-height: 10px;    
+}   
+.club-auto-select {   
+    float: left;    
+    padding: 0 15px 17px; 
+    text-align: center;   
+    width: 100%;    
+}   
+.club-locator-flyout .clubFind.anonymous-user {    
+    float: left;  
+    white-space: normal;
+    width:100%;
+}   
+h3.auto-select-msg {    
+    color: rgba(34, 34, 34, 0.8);   
+    font-family: bitter;    
+    font-size: 18px;    
+    font-weight: 700;   
+    margin-bottom:15px; 
+    padding-bottom:5px 0;  
+}   
+.question {   
+    color: rgba(34, 34, 34, 0.5);   
+    font-size: 12px;    
+    font-weight: 400;
+    margin-bottom: -3px;  
+}   
+a.linkcolor {   
+    color: #01cc75;   
+    font-size: 12px;    
+    font-weight: 500;   
+}
+
+
+.fly-heading{
+   border-bottom: 2px solid #01cc75;
+    display: block;
+    font-family: bitter;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 18px;
+    margin: 5px 15px 0;
+    padding-bottom: 2px;
+    white-space: normal;
+    color:#363636;
+}
+
+.formFieldElement {
+    /*clear: both;*/
+    margin-top: 10px;
+    position: relative;
+}
+label{
+   display: inline-block;
+    margin-bottom: 5px;
+}
+
+.lblWMLTxt {
+    color: rgba(34, 34, 34, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    left: 10px;
+    position: absolute;
+    top: 28%;
+}
+
+.lblWMSTxt {
+ top:2px!important;
+ font-size: 10px!important;
+ color:rgba(166, 166, 166, 0.5);
+ font-weight:500;
+}
+
+.formFieldElement input {
+    color: rgba(34, 34, 34, 0.8);
+    font: 12px Arial;
+    padding: 18px 0 10px 10px;
+    width: 63%;
+    float:left;
+    border:1px solid #dde7eb;
+    height:45px;
+    font-weight:400;
+}
+
+.btnfind-club{
+  float:left;
+  clear:both;
+  margin-top:15px;
+}
+.btnfind-club > a {
+    margin-left: 10px;
+}
+
+input#miles {
+  padding-left: 45px;
+  font-size: 12px;
+  width: 105px;
+
+}
+.error-msg{
+  color:#d0021b;
+  padding:20px 0px 0;
+  float:left;
+  clear:both;
+  font-size:12px; 
+  font-weight:500;
+}
+
+.dropdown-menu.miles-list-item > li > a{
+   padding: 0 5px;
+}
+.miles-group .dropdown-menu {
+  margin: 2px 0 0 -2px;
+  min-width:110px;
+  border-radius: 0;
+}
+.btn-group.open .dropdown-toggle {
+  box-shadow:none;
+
+}
+a.miles-selected{
+  text-decoration:none;
+  color:#01cc75;
+  font-size:12px;
+  font-weight:500;
+  cursor:auto;
+}
+
+.btn-group.miles-group {
+    float: right;
+    padding-top: 20px;
+}
+
+.btn-blue{
+    background-color: #01cc75;
+    color: #fff;
+    font-size: 14px !important;
+    float:right;
+    margin-top:5px;
+    font-weight:700;
+}
+
+.formFieldElement.field-miles {
+    float: left;
+}
+
+.formFieldElement.error-zip {
+    float: left;
+    margin-right: 10px;
+    width: 100%;
+}
+.formFieldElement .error-miles {
+    float: left;
+    width: 117px;
+}
+
+div#clubLocator {
+
+   /* margin: 30px 50px 30px 50px;
+    float:left;
+    clear:both;*/
+    outline:none;
+}
+
+/* Flyout container */
+
+.club-locator-flyout{
+    width: 340px;
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
+    border-radius: 0; 
+    clear:both;
+    float:left;
+    padding:0;
+}
+
+.anonymous-user{
+  .usr-msg{
+    padding:20px 15px 6px;
+    color:rgba(34, 34, 34, 0.8);
+    line-height:15px;
+    font-size:12px;
+  }
+
+
+ 
+
+}
+
+/*
+.clublocator-wrapper{
+   width: 100px;
+   a{
+      display:block;
+      font-size: 11px;
+      line-height: 14px;
+   }
+   .club-locator{
+      font-size: 10px;
+      font-weight: bold;
+
+   }
+
+   .clublocator-wrapper > a {
+      font-size: 11px;
+      line-height: 12px;
+    }
+}*/
+
+
+/* Primary Club */
+.primary-club {
+    clear: both;
+    display:block;
+    padding:0px 15px 0;
+
+   >h4{
+    color: rgba(34, 34, 34, 0.8);
+    font-family: bitter;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 2px;
+   } 
+
+  >a{
+    color: #01cc75;
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+}
+.club-list{
+  clear:both;
+  float:left;
+  padding:0px 15px 0;
+  width:100%;
+  overflow-y: auto;
+
+  >h4{
+    border-bottom: 2px solid #01cca6;
+    color: #363636;
+    cursor: auto;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 18px;
+    margin-bottom: 10px;
+    width: 100%;
+    font-family:bitter;
+  }
+  address a {
+    color: #01cc75;
+    font-weight:500;
+    font-size:12px;
+}
+}
+
+
+.store-time{
+    color: rgba(34, 34, 34, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+    padding: 14px 0 0;
+}
+.info-group {
+    border-bottom: 1px solid #eee;
+    padding: 0 15px;
+    width:100%;
+    float:left;
+    margin-bottom:10px;
+}
+.info-group {
+  a {
+      color: #01cc75;
+      font-size: 12px;
+      font-weight: 500;
+      margin-right:20px;
+  }
+  address{
+      color: rgba(34, 34, 34, 0.8);
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 15px;
+      margin: 10px 0;
+
+  }
+}
+
+.info-group > div{
+  margin-bottom:10px;
+}
+
+.label-text{
+    color: rgba(34, 34, 34, 0.5);
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    display:block;
+    margin-bottom:-4px;
+}
+
+form.set-club {
+    border-bottom: 1px solid #eee;
+    display: block;
+    float: left;
+    padding: 0 15px 15px;
+    width: 100%;
+}
+
+
+/* Address Card */
+
+.address-card{
+
+    padding: 15px 0 15px;
+    float:left;
+    border-bottom: 1px solid #eee;
+    overflow:visible;
+    box-sizing:border-box;
+
+    >address{
+      float: left;
+      margin-bottom: 0;
+      position: relative;
+      width:300px;
+      line-height: 16px;
+    }
+
+}
+.address-card:last-child {
+    border-bottom: medium none;
+}
+
+.show-more-clubs{
+    background-color: #fff;
+    clear: both;
+    color: #01cc75;
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    padding:5px;
+}
+.show-more-clubs:hover{
+  color: #01cc75;
+  text-decoreation:none;
+}
+.address-wrapper {
+    float: left;
+    max-height: 420px;
+    margin-bottom: 10px;
+    padding: 0 ;
+}
+
+.club-name{
+  float:left;
+  width:100%;
+
+
+  .miles-label{
+    float:right;
+    color:rgba(34, 34, 34, 0.8);
+    font-size:12px;
+  }
+}
+.club-address{
+    float: left;
+    padding-top: 0px;
+    width:165px;
+    font-size:12px;
+    font-weight:400;
+    color:rgba(34, 34, 34, 0.8);
+}
+.mk-dflt {
+    bottom: 0;
+    float: right;
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    color:#01cca6;
+}
+.success-msg{
+
+    color: #1574ff;
+    padding: 15px 0px 0;
+    font-size:12px;
+    font-weight:500;
+    float:left;
+
+}
+.caret-sams{
+    background: url("/static/images/socialmedia.png") repeat scroll 0 -15px rgba(0, 0, 0, 0);
+    border: medium none;
+    height: 10px;
+    width: 10px
+}
+.availability-msg{
+    border-bottom: 1px solid #eee;
+    color: #87a6b3;
+    padding: 10px 15px;
+    display:none
+  
+}
+.clubnm{
+  color:rgba(34, 34, 34, 0.8);
+  font-size:12px;
+}
+
+.srv-error-msg{
+  color:#d0021b;
+  padding:0 0 10px 15px;
+  font-size:12px; 
+  font-weight:500;
+  white-space:normal;
+}
+
+
+
+/* ------------------------------------------------- */

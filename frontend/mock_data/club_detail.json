@@ -1,0 +1,84 @@
+{   
+    "status":"OK",
+    "payload":{   
+        "clubID":"4704",
+        "regularHours":[   
+            {   
+                "weekDay":"MONDAY",
+                "hours":"10:00 am - 08:30 pm"
+            },
+            {   
+                "weekDay":"TUESDAY",
+                "hours":"10:00 am - 08:30 pm"
+            },
+            {   
+                "weekDay":"WEDNESDAY",
+                "hours":"10:00 am - 08:30 pm"
+            },
+            {   
+                "weekDay":"THURSDAY",
+                "hours":"10:00 am - 08:30 pm"
+            },
+            {   
+                "weekDay":"FRIDAY",
+                "hours":"10:00 am - 08:30 pm"
+            },
+            {   
+                "weekDay":"SATURDAY",
+                "hours":"09:00 am - 08:30 pm"
+            },
+            {   
+                "weekDay":"SUNDAY",
+                "hours":"10:00 am - 06:00 pm"
+            }
+        ],
+        "goldenHours":[   
+            {   
+                "weekDay":"MONDAY",
+                "hours":"07:00 am - 10:00 am"
+            },
+            {   
+                "weekDay":"TUESDAY",
+                "hours":"07:00 am - 10:00 am"
+            },
+            {   
+                "weekDay":"WEDNESDAY",
+                "hours":"07:00 am - 10:00 am"
+            },
+            {   
+                "weekDay":"THURSDAY",
+                "hours":"07:00 am - 10:00 am"
+            },
+            {   
+                "weekDay":"FRIDAY",
+                "hours":"07:00 am - 10:00 am"
+            },
+            {   
+                "weekDay":"SATURDAY",
+                "hours":"07:00 am - 09:00 am"
+            }
+        ],
+        "address":{   
+            "streetAddress":"7663 N. Blackstone",
+            "city":"Fresno",
+            "state":"CA",
+            "zipcode":"93711",
+            "phone":"446-559-0106"
+        },
+        "clubName":"Fresno, CA",
+        "neighbouringClubs":[   
+            {   
+                "clubID":"4704",
+                "miles":"2.41",
+                "address":{   
+                    "streetAddress":"7663 N Blackstone Ave",
+                    "city":"Fresno",
+                    "state":"CA",
+                    "zipcode":"93720"
+                },
+                "clubName":"Fresno, CA "
+            }
+        ]
+    }
+}
+ 

@@ -1,0 +1,58 @@
+{
+  "status": "OK",
+  "payload": {
+    "message": "Thanks xxxxx for being a member for xx years",
+    "signedIn": "true or false",
+    "fname": "<First Name>",
+    "lname": "<Last Name>",
+    "membershipType":"<business or savings or plus or itj or other>",
+    "startDate" : "23-Nov-2011",
+    "renewalInfo": {
+      "title": "Renew Your Membership",
+      "link": "<Renewal URL>",
+      "isAutoRenew": "true or false",
+      "renewalStatus" : "true or false",
+      "isMembershipExpired" : "true or false",
+      "expiryDate" : "23-Nov-2015",
+      "renewalMessage": "Your Membership will expire in 15 days"
+    },
+    "instantSavings": {
+      "savingsAvaliable":"true or false",
+      "title": "Instant Savings",
+      "url": "<Instant Savings URL>",
+      "offers": "99",
+      "savings": "$100.00"
+    },
+    "cashRewards": {
+      "elgible": "true or false",
+      "available": "true or false",
+      "title": "Cash Rewards",
+      "url": "<Cash Rewards URL>",
+      "message": "Upgrade to Plus membership for only $14.95 and earnup to $500.00 a year in Cash Rewards",
+      "value": "100.00",
+      "status": "available or pending"
+    },
+    "linkGroup": [
+      {
+        "groupTitle": "<Group Title>",
+        "isLink": "true or false",
+        "url": "<URL for the group>",
+        "childLinks": {
+          "<link1>": "<Link1 URL>",
+          "<link2>": "<Link2 URL>",
+          "<link3>": "<Link3 URL>"
+        }
+      },
+      {
+        "groupTitle": "<Group Title>",
+        "isLink": "true or false",
+        "url": "<URL for the group>",
+        "childLinks": {
+          "<link1>": "<Link1 URL>",
+          "<link2>": "<Link2 URL>",
+          "<link3>": "<Link3 URL>"
+        }
+      }
+    ]
+  }
+}

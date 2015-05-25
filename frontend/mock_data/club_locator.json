@@ -1,0 +1,83 @@
+{ 
+   "status":"OK",
+   "header":{ 
+      "headerAttributes":{ 
+         "pageCount":2,
+         "totalCount":10
+      }
+   },
+   "payload":{ 
+      "clubs":[ 
+         { 
+            "clubID":"6620",
+            "miles":"14.55",
+            "address":{ 
+               "streetAddress":"2495 Iron Point Rd #11",
+               "city":"Folsom",
+               "state":"CA",
+               "zipcode":"95630",
+               "phone":"(916) 817-8965",
+               "latitude":"38.6449",
+               "longitude":"-121.1179"
+            },
+            "clubName":"Folsom, CA "
+         },
+         { 
+            "clubID":"4704",
+            "miles":"10.08",
+            "address":{ 
+               "streetAddress":"904 Pleasant Grove Blvd",
+               "city":"Roseville",
+               "state":"CA",
+               "zipcode":"95678",
+               "phone":"(916) 781-8160",
+               "latitude":"38.7864",
+               "longitude":"-121.2878"
+            },
+            "clubName":"Roseville, CA "
+         },
+         { 
+            "clubID":"6405",
+            "miles":"15.33",
+            "address":{ 
+               "streetAddress":"900 N Walton Ave",
+               "city":"Yuba City",
+               "state":"CA",
+               "zipcode":"95993",
+               "phone":"(530) 751-1244",
+               "latitude":"39.139",
+               "longitude":"-121.6454"
+            },
+            "clubName":"Yuba City, CA "
+         },
+         { 
+            "clubID":"1405",
+            "miles":"19.33",
+            "address":{ 
+               "streetAddress":"900 ABCD",
+               "city":"Yuba City",
+               "state":"CA",
+               "zipcode":"95993",
+               "phone":"(530) 751-1244",
+               "latitude":"39.139",
+               "longitude":"-121.6454"
+            },
+            "clubName":"Bentonville, CA "
+         },
+         { 
+            "clubID":"4704",
+            "miles":"14.25",
+            "address":{ 
+               "streetAddress":"7663 N Blackstone Ave",
+               "city":"Fresno",
+               "state":"CA",
+               "zipcode":"93720",
+               "phone":"(559) 446-0106",
+               "latitude":"36.8471",
+               "longitude":"-119.7939"
+            },
+            "clubName":"Fresno, CA "
+         }
+      ]
+   }
+}

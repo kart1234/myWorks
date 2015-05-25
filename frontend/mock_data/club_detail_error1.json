@@ -1,0 +1,19 @@
+{ 
+   "status":"NOT_FOUND",
+   "errors":[ 
+      { 
+         "code":"404.CLUB_LOCATOR_SERVICES.1104",
+         "field":"clubId",
+         "description":"No club found with given Id",
+         "info":"For more information, please check the url : https://confluence.walmart.com/display/SAMSGS/Chalet+-+Services+API",
+         "severity":"ERROR",
+         "category":"REQUEST",
+         "errorIdentifiers":{ 
+            "entry":[ 
+ 
+            ]
+         }
+      }
+   ],
+   "payload":null
+}

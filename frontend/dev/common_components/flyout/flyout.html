@@ -1,0 +1,37 @@
+<div class="flyout-container" id="{{id}}">
+
+  <style>
+    .flyout-container {
+      border: 1px solid #ddd;
+      border-radius: 2px;
+      position: absolute;
+      margin-bottom: 5px;
+      z-index: 1;
+      display: none;
+      background-color: white;
+    }
+
+    .flyout-close-link-container {
+      top: 10px;
+      right: 20px;
+      cursor: pointer;
+      color: rgba(34, 34, 34, 0.8);
+      z-index: 1;
+      position: absolute;
+      font-size: 15px;
+    }
+
+    .close-flyout-icon::before {
+      content: url(/static/images/close.png);
+    }
+  </style>
+
+
+  <span class="flyout-close-link-container">
+    <span class="close-flyout-text">{{close_link_left_text}}</span>
+    <span class="close-flyout-icon"></span>
+    <span class="close-flyout-text">{{close_link_right_text}}</span>
+  </span>
+  <div class="flyout-html-content" ng-transclude>
+  </div>
+</div>

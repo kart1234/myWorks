@@ -1,0 +1,19 @@
+{ 
+   "status":"FAIL",
+   "errors":[ 
+      { 
+         "code":"500.CLUB_LOCATOR_SERVICES.1105",
+         "field":"clubId",
+         "description":"Error fetching club details. Please try again",
+         "info":"For more information, please check the url : https://confluence.walmart.com/display/SAMSGS/Chalet+-+Services+API",
+         "severity":"ERROR",
+         "category":"REQUEST",
+         "errorIdentifiers":{ 
+            "entry":[ 
+ 
+            ]
+         }
+      }
+   ],
+   "payload":null
+}
