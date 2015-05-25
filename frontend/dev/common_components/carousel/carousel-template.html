@@ -1,0 +1,48 @@
+<section class="crsl-TopSell col-md-12">
+    <h4 class="pull-left">Treding in Your Club</h4>
+    <a class="pull-right" href="#">See All</a>
+    <div class="clearfix"></div>
+    <div class="card-Carousel-Holder kcarousel-wrapper col-md-12">
+
+        <div class="jcarousel">
+            <ul class="cards" style="left: 0px; top: 0px; width: 20000em;">
+                <li>
+                    <img src="http://placehold.it/238x347/efefef/&amp;text=internal+omp+ad">
+                </li>
+               
+              
+                <li ng-repeat="prod in vm.dataprd.products">
+                    <div class="card cardA">
+                        <span class="label flag flag-pink">instant savings</span>
+                        <a href="#" class="cardProdLink">
+                            <figure>
+                                <img class="cardProdImg" src="{{prod.imageURL}}" width="190" height="190" alt="{{prod.itemName}}">
+                                <figcaption class="cardProdTitle">
+                                    {{prod.itemName}}
+                                </figcaption>
+                            </figure>
+                        </a>
+                        <div class="prodRatings">
+                            <a href="#"><img src="http://reviews.samsclub.com/1337/prod14280049/ratings.gif" width="60" height="12" alt="ratings"></a>
+                        </div>
+                        <div class="promoMsgBlue">&nbsp;</div>
+                        <div class="prodPricingInfo"><span class="superscript">$</span>
+                            <span class="price">{{prod.itemPrice}}</span>
+                            <span class="superscript">98</span>
+                        </div>
+                        <span class="prodOfferFlag">Free Shipping</span></div>
+                </li>
+                <!-- -->
+
+            </ul>
+
+
+        </div>
+    </div>
+    <div class="scroll-Left jcarousel-prev jcarousel-control-prev inactive" data-jcarouselcontrol="true"><img src="/static/images/crsl-arrow-left.png"></div>
+    <div class="scroll-Right jcarousel-next jcarousel-control-next" data-jcarouselcontrol="true"><img src="/static/images/crsl-arrow-right.png"></div>
+</section>
+
+
+</section>
+<div class="clearfix"></div>

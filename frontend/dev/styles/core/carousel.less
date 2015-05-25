@@ -1,0 +1,128 @@
+/*/*
+This is the visible area of you carousel.
+Set a width here to define how much items are visible.
+The width can be either fixed in px or flexible in %.
+Position must be relative!
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+/*
+This is the container of the carousel items.
+You must ensure that the position is relative or absolute and
+that the width is big enough to contain all items.
+
+.jcarousel ul {
+    /*width: 20000em;*/
+    /*position: relative;*/
+
+    /* Optional, required in this case since it's a <ul> element 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+These are the item elements. jCarousel works best, if the items
+have a fixed width and height (but it's not required).
+
+.jcarousel li {
+    /* Required only for block elements like <li>'s */
+    /*float: left;
+}
+*/
+
+
+.jcarousel-wrapper {
+    margin: 20px auto;
+    position: relative;
+    border: 10px solid #fff;
+   
+}
+
+
+
+.crsl-TopSell .card-Carousel-Holder .scroll-Left{
+  position: absolute; 
+  left: 16px;
+  top: 100px;
+  width: 53px;
+  height: 80px;
+  background-color: rgba(233, 231, 226, 0.8);
+  cursor: pointer; 
+  display: block;
+  z-index: 100
+}
+
+.crsl-TopSell .card-Carousel-Holder .scroll-Right{
+  position: absolute; 
+  left: 750px;
+  top: 100px;
+  width: 53px;
+  height: 80px;
+  background: #4E443C;
+  color: #fff;
+  background-color: rgba(233, 231, 226, 0.8);
+  cursor: pointer; 
+  display: block;
+  z-index: 100
+}
+
+/** Carousel **/
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    position: relative;
+    float: left;
+}
+
+/** Carousel Controls **/
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    top: 187px;
+    width: 65px;
+    height: 92px;
+    text-align: center;
+    cursor: pointer;;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 24px/27px Arial, sans-serif;
+   
+}
+
+.jcarousel-control-prev {
+    /*left: -50px;*/
+}
+
+.jcarousel-control-next {
+    right: 0px;
+}
+
+.jcarousel-control-prev:hover span,
+.jcarousel-control-next:hover span {
+    display: block;
+}
+
+.jcarousel-control-prev.inactive,
+.jcarousel-control-next.inactive {
+    opacity: .5;
+    cursor: default;
+}
+

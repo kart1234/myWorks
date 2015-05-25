@@ -1,0 +1,202 @@
+@sams-green: #01cc75;
+@sams-text-color1: #4d4d4d;
+@sams-text-color2: rgba(34, 34, 34, 0.8);
+@sams-border-color: #e9e7e2;
+@sams-background-color: #f9f9f9;
+
+@eight-pixel-gap: 8px;
+@sixteen-pixel-gap: 16px;
+@twenty-four-pixel-gap: 24px;
+@thirty-two-pixel-gap: 32px;
+
+.business-departments {
+
+  color: @sams-text-color2;
+  position: relative;
+  width: 1140px;
+  height: 500px;
+  font-size: 15px;
+
+  a, a:hover, a:visited, a:active, a:focus {
+    text-decoration: none;
+    color: @sams-text-color2;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .business-departments-content {
+    background-color: white;
+    height: 100%;
+  }
+
+  .business-departments-navigation {
+    padding: 7px 0 7px 32px;
+    border-bottom: 1px solid @sams-border-color;
+    height: 40px;
+  }
+
+  .business-featured-departments-container {
+    margin-right: @eight-pixel-gap;
+  }
+
+  .business-featured-departments-title {
+    font-weight: 700;
+    font-size: 18px;
+    font-family: bitter;
+    color: @sams-text-color1;
+    vertical-align: middle;
+  }
+
+  .business-featured-departments {
+    width: 380px;
+    color: @sams-text-color2;
+    border-right: 1px solid @sams-border-color;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding-top: 10px;
+    height: 460px;
+  }
+
+  .business-featured-department {
+    height: 40px;
+    padding: 10px 0 10px 35px;
+  }
+
+  .business-featured-department:hover {
+    background-color: @sams-background-color;
+    cursor: pointer;
+  }
+
+  .business-featured-department-heading {
+    float: left;
+  }
+
+  .business-featured-department-arrow {
+    float: right;
+    position: relative;
+    right: 47px;
+  }
+
+  .business-featured-department-content {
+    position: absolute;
+    left: 380px;
+    width: 760px;
+    background-color: white;
+    height: 460px;
+    overflow: scroll;
+    top: 0;
+    padding-top: 10px;
+  }
+
+  .business-featured-department-column {
+    float: left;
+    width: 50%;
+  }
+
+  .business-sub-department-title {
+    font-weight: 700;
+  }
+
+  .business-aisle-link, .business-sub-department-title-link {
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 35px;
+    display: block;
+  }
+
+  .business-aisle-link:hover, .business-sub-department-title-link:hover {
+    background-color: @sams-background-color;
+  }
+
+  .business-aisle-link:active, .business-sub-department-title-link:active {
+    background-color: @sams-green;
+    color: white !important;
+  }
+
+  .business-center-default-options {
+    top: 40px;
+    position: absolute;
+    left: 380px;
+    width: 760px;
+    background-color: white;
+    height: 460px;
+    overflow: scroll;
+  }
+
+  .business-center-default-options-container {
+    height: 290px;
+    padding-top: 10px;
+  }
+
+  .business-tools-container, .business-services-container {
+    float: left;
+    width: 50%;
+  }
+
+  .business-tools-title, .business-services-title {
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 35px;
+  }
+
+  .business-tools-title, .business-services-title {
+    color: @sams-text-color2;
+    font-weight: 700;
+    font-family: bitter;
+  }
+
+  .business-tools-heading, .business-services-heading {
+    padding-bottom: 5px;
+    border-bottom: 3px solid @sams-green;
+  }
+
+  .business-tool-link, .business-service-link {
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 35px;
+    display: block;
+  }
+
+  .business-tool-link:hover, .business-service-link:hover {
+    background-color: @sams-background-color;
+  }
+
+  .business-tool-link:active, .business-service-link:active {
+    background-color: @sams-green;
+    color: white !important;
+  }
+
+  .business-center-promo-1 {
+    width: 280px;
+    height: 170px;
+    border: 1px solid @sams-border-color;
+    float: left;
+  }
+
+  .business-center-promo-2 {
+    width: 480px;
+    border: 1px solid @sams-border-color;
+    height: 170px;
+    float: left;
+  }
+
+  .business-featured-department-arrow::before {
+    content: url(/static/images/greater-than-green.png);
+  }
+
+  .featured-departments-click-effect {
+    background-color: @sams-green !important;
+
+    .business-featured-department-title * {
+      color: white !important;
+    }
+
+    .business-featured-department-arrow::before {
+      content: url(/static/images/greater-than-white.png);
+    }
+  }
+}

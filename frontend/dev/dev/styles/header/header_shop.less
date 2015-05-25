@@ -1,0 +1,247 @@
+@sams-green: #01cc75;
+@sams-text-color1: #4d4d4d;
+@sams-text-color2: rgba(34, 34, 34, 0.8);
+@sams-border-color: #e9e7e2;
+@sams-background-color: #f9f9f9;
+
+@eight-pixel-gap: 8px;
+@sixteen-pixel-gap: 16px;
+@twenty-four-pixel-gap: 24px;
+@thirty-two-pixel-gap: 32px;
+
+.shop-departments {
+
+  color: @sams-text-color2;
+  position: relative;
+  width: 1140px;
+  height: 500px;
+  font-size: 15px;
+
+  a, a:hover, a:active, a:focus, a:visited {
+    text-decoration: none;
+    color: @sams-text-color2;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+  .shop-departments-content, .shop-all-departments-content, .shop-department-content {
+    background-color: white;
+  }
+
+  .shop-departments-navigation, .shop-all-departments-navigation, .shop-department-navigation {
+    padding: 7px 0 7px 32px;
+    border-bottom: 1px solid @sams-border-color;
+    height: 40px;
+  }
+
+  .shop-featured-departments-container {
+    margin-right: @eight-pixel-gap;
+    display: inline-block;
+  }
+
+  .shop-featured-departments-title, .shop-all-departments-heading, .shop-departments-heading {
+    font-weight: 700;
+    font-size: 18px;
+    font-family: bitter;
+    color: @sams-text-color1;
+    vertical-align: middle;
+  }
+
+  .shop-featured-departments {
+    width: 286px;
+    border-right: 1px solid @sams-border-color;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    padding-top: 20px;
+    height: 460px;
+  }
+
+  .shop-featured-department {
+    height: 32px;
+    padding: 6px 0 6px 32px;
+    font-weight: 500;
+  }
+
+  .shop-featured-department:hover {
+    background-color: @sams-background-color;
+    cursor: pointer;
+  }
+
+  .shop-featured-department-heading {
+    float: left;
+    font-weight: 700;
+  }
+
+  .shop-featured-department-arrow {
+    float: right;
+    margin: 2px 24px 0 0;
+  }
+
+  .shop-featured-department-arrow::before {
+    content: url(/static/images/greater-than-green.png);
+  }
+
+  .shop-featured-department-content {
+    position: absolute;
+    left: 286px;
+    width: 854px;
+    background-color: white;
+    height: 460px;
+    overflow: scroll;
+    top: 0;
+    padding-top: 20px;
+  }
+
+  .shop-featured-department-column {
+    float: left;
+    width: 33.33%;
+  }
+
+  .shop-sub-department-title-link {
+    font-weight: 700;
+    min-height: 32px;
+    padding-top: 6px;
+  }
+
+  .shop-aisle-link {
+    min-height: 22px;
+    font-size: 12px;
+    padding-top: 3px;
+  }
+
+  .shop-aisle-link, .shop-sub-department-title-link {
+    padding-left: 54px;
+    display: block;
+  }
+
+  .shop-aisle-link:hover, .shop-sub-department-title-link:hover {
+    background-color: @sams-background-color;
+  }
+
+  .shop-aisle-link:active, .shop-sub-department-title-link:active {
+    background-color: @sams-green;
+    color: white !important;
+  }
+
+  .shop-deals {
+    top: 40px;
+    position: absolute;
+    left: 286px;
+    width: 854px;
+    background-color: white;
+    height: 460px;
+    overflow: scroll;
+  }
+
+  .shop-instant-savings, .shop-auctions {
+    width: 585px;
+    float: left;
+    border: 1px solid @sams-border-color;
+  }
+
+  .shop-promotions, .shop-gift-cards {
+    width: 269px;
+    float: left;
+    border: 1px solid @sams-border-color;
+  }
+
+  .shop-instant-savings, .shop-promotions {
+    height: 273px;
+  }
+
+  .shop-gift-cards, .shop-auctions {
+    height: 187px;
+  }
+
+  .shop-all-departments-container {
+    display: inline-block;
+  }
+
+  .shop-all-departments-direct-link {
+    font-size: 14px;
+    color: @sams-green !important;
+    font-weight: 700;
+    vertical-align: middle;
+  }
+
+  .shop-all-departments-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 1140px;
+  }
+
+  .shop-featured-departments-link {
+    margin-right: @eight-pixel-gap;
+    vertical-align: middle;
+  }
+
+  .shop-featured-departments-link::before, .shop-all-departments-back-link::before {
+    content: url(/static/images/left-arrow.png);
+  }
+
+  .shop-all-departments-links-container {
+    overflow: scroll;
+    height: 460px;
+    width: 100%;
+  }
+
+  .shop-all-departments-column, .shop-department-column {
+    width: 33.33%;
+    float: left;
+    height: 100%;
+  }
+
+  .shop-department-link {
+    min-height: 32px;
+    padding: 6px 0 0 54px;
+    display: block;
+  }
+
+  .shop-department-link:hover {
+    background-color: @sams-background-color;
+  }
+
+  .shop-department-link:active {
+    background-color: @sams-green;
+    color: white !important;
+  }
+
+  .shop-department-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 1140px;
+  }
+
+  .shop-all-departments-back-link {
+    margin-right: @eight-pixel-gap;
+    vertical-align: middle;
+  }
+
+  .shop-department-container {
+    height: 460px;
+    width: 100%;
+    overflow: scroll;
+  }
+
+  .featured-departments-click-effect {
+    background-color: @sams-green !important;
+
+    .shop-featured-department-title * {
+      color: white !important;
+    }
+
+    .shop-featured-department-arrow::before {
+      content: url(/static/images/greater-than-white.png);
+    }
+  }
+}
