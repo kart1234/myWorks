@@ -1,7 +1,7 @@
 <link href="/static/css/header/header.css" rel="stylesheet">
 
-<script src="/static/common_components/flyout/flyout.js"></script>
-<script src="/static/js/header/header.js"></script>
+
+
 
 <header ng-controller="SamsHeaderCtrl as samsHeaderCtrl">
 		<nav class="upperNav col-md-12">
@@ -50,7 +50,7 @@
 							<span class="clubName">Your Club</span>
 							<span class="clubLocation">Concord, CA</span>
 					</a>
-					{{> clubLocator/clubDisplay}}
+					
 				</li>
 				<li class="flexiWidth navItem" tabindex="9">
 
@@ -60,12 +60,301 @@
 							<span class="clubLocation">Heisenberg</span>
 					</a>
 				</li>
-				<li tabindex="10" class="navItem lastNavItem">
-					<a class="header-sprite samsClubCart navLink" id="navCart">
-						999
+				<li tabindex="10" class="navItem lastNavItem" ng-controller="MinicartController as cartCtrl">
+					<a href="" class="header-sprite samsClubCart navLink" id="navCart" ng-click="cartCtrl.toggleCart()">
+						
 					</a>
+					
+					<div class="mini-cart-holder">
+						<mini-cart-header kart="cartCtrl.cartFactory.items" togFun="cartCtrl.toggleCart"></mini-cart-header>
+					<div>
 				</li>
 			</ul>
 		</nav>
+		<style>
+			li,ul, h4{padding: 0; margin: 0; list-style: none;}
+			.lastNavItem{
+				position: relative;
+			}
+			.mini-cart-holder{
+				position: absolute;
+				right: 0;
+				top: 65px;				
+			}
+			
+			.mini-cart-hdr{
+				
+				background-color: #ffffff;
+				padding: 0 24px 0 24px;
+				height: 502px;
+				width: 380px;
+				border: 1px solid #e9e7e2;
+
+
+
+			}
+			.mini-cart-btm{
+				height: 100px;
+			}
+			.mini-cart-hdr .cart-cls{
+				text-align: right
+			}
+			.mini-cart-top{
+				height: 40px;
+				padding-top: 8px;
+			}
+			.ship-hdr, .pick-hdr{
+				font: 700 15px/18px Bitter;
+				color: rgba(43, 43, 43, 0.8);
+				padding-bottom: 4px;
+				border-bottom: 2px solid #01cc75;
+			}
+			.pick-hdr{border-bottom: 2px solid #0d60d9;}
+			.type-sec{height: 40px;}
+
+			.ship-hdr .qty, .pick-hdr .qty{font: 400 15px/18px Bitter; color: rgba(34, 34, 34, 0.5);}
+			.cart-cls{}
+			.ver-scroll{overflow-y: auto; height: 360px}
+			.img-cont{float: left; padding: 5px 0;}
+			.mg-tp20{margin-top:20px;}
+			.prd-crd{height: 110px;border-bottom: 1px solid #ccc;}
+			.dtls-sec{margin-left: 100px;}
+			.dtls-wrp{padding: 18px 0 24px 16px; height: 64px;}
+			.ttl{font: 400 15px/16px Chrono, Arial; height: 32px; display: inline-block; color: #222222;}
+			.dtls-sec .qty{font: 500 11px/16px Chrono, Arial; color: rgba(34, 34, 34, 0.5); padding-top: 14px;}
+			.super-script{font: 700 14px/17px Bitter, Arial; color: black; vertical-align: top;}
+			.price{font: 700 24px/29px Bitter, Arial; color: black;}
+			.pri-qty{padding-top: 10px;}
+			.total-pri{padding-top: 16px;}
+			.pri-lbl{color: rgba(33, 33, 33, 0.5); font: 500 11px/13px Chrono, Arial;}
+			.mg-tp14{margin-top: 14px;}
+			.view-cart-btn{
+			    display: inline-block;
+			    width: 332px;
+			    height: 32px;
+			    background-color: #01cc75;
+			    color: #fff;
+			    border-radius: 4px;
+			    font: 700 14px/17px Chrono, Arial;
+			}
+			.btn-sec{margin-top: 10px;}
+			ul.ship-dtls li:last-child, ul.pick-dtls li:last-child{border-bottom: none;}
+		</style>
 </header>
+
+<section>
+	 <section carousel-component class="crsl-TopSell col-md-12">
+				<h4 class="pull-left">Treding in Your Club</h4>
+				<a class="pull-right" href="#">See All</a>
+				<div class="clearfix"></div>
+			<div class="card-Carousel-Holder pcarousel-wrapper col-md-12">
+
+					<div class="jcarousel">	
+						<ul class="cards" style="left: 0px; top: 0px; width: 20000em;">
+							<li>
+								<img src="http://placehold.it/238x347/efefef/&amp;text=internal+omp+ad">
+							</li>
+<!-- --><li><div class="card cardA">
+<span class="label flag flag-pink">instant savings</span>
+<a href="#" class="cardProdLink"><figure>
+<img class="cardProdImg" src="http://scene7.samsclub.com/is/image/samsclub/0081035102441_A?$img_size_190x190$" width="190" height="190" alt="MisFit Swarovski Shine Slake Set Activity &amp; Sleep Monitor" title="MisFit Swarovski Shine Slake Set Activity &amp; Sleep Monitor">
+<figcaption class="cardProdTitle">
+Fit Da Bit Swarovski Set Activity &amp; Sleep Monitor
+</figcaption></figure></a><div class="prodRatings">
+<a href="#"><img src="http://reviews.samsclub.com/1337/prod14280049/ratings.gif" width="60" height="12" alt="ratings"></a></div>
+<div class="promoMsgBlue">Promotional message here</div>
+<div class="prodPricingInfo"><span class="superscript">$</span>
+<span class="price">799</span>
+<span class="superscript">00</span>
+</div><span class="prodPriceStrikedColor">
+<span class="prodPriceStriked">$999.99</span>
+</span><span class="prodOfferFlag">Free Shipping</span></div>
+</li><!-- -->
+
+<!-- --><li><div class="card cardA">
+<span class="label flag flag-orange">best seller</span>
+<a href="#" class="cardProdLink"><figure>
+<img class="cardProdImg" src="http://scene7.samsclub.com/is/image/samsclub/0087430500652_A?$img_size_190x190$" width="190" height="190" alt="LG Tone Pro Bluetooth Headset" title="LG Tone Pro Bluetooth Headset">
+<figcaption class="cardProdTitle">
+LG Tone Pro Bluetooth Headset
+</figcaption></figure></a><div class="prodRatings">
+<a href="#"><img src="http://reviews.samsclub.com/1337/prod14280049/ratings.gif" width="60" height="12" alt="ratings"></a></div>
+<div class="promoMsgBlue">Promotional message here</div>
+<div class="prodPricingInfo"><span class="superscript">$</span>
+<span class="price">59</span>
+<span class="superscript">88</span>
+</div><span class="prodPriceStrikedColor">
+<span class="prodPriceStriked">$99.99</span>
+</span><span class="prodOfferFlag">Free Shipping</span></div>
+</li><!-- -->
+
+<!-- --><li><div class="card cardA">
+<span class="label flag flag-blue">top rated</span>
+<a href="#" class="cardProdLink"><figure>
+<img class="cardProdImg" src="http://scene7.samsclub.com/is/image/samsclub/0695231921829_A?$img_size_190x190$" width="190" height="190" alt="LG Tone Pro Bluetooth Headset" title="iBattz Battstation 12000 Portable Phone/Tablet Charger">
+<figcaption class="cardProdTitle">
+iBattz Battstation 12000 Portable Phone/Tablet
+</figcaption></figure></a><div class="prodRatings">
+<a href="#"><img src="http://reviews.samsclub.com/1337/prod14280049/ratings.gif" width="60" height="12" alt="ratings"></a></div>
+<div class="promoMsgBlue">Promotional message here</div>
+<div class="prodPricingInfo"><span class="superscript">$</span>
+<span class="price">67</span>
+<span class="superscript">88</span>
+</div><span class="prodPriceStrikedColor">
+<span class="prodPriceStriked">$87.88</span>
+</span><span class="prodOfferFlag">Free Shipping</span></div>
+</li><!-- -->
+
+<!-- --><li><div class="card cardA">
+<span class="label flag flag-pink">instant savings</span>
+<a href="#" class="cardProdLink"><figure>
+<img class="cardProdImg" src="http://scene7.samsclub.com/is/image/samsclub/0007169143748_A?$img_size_190x190$" width="190" height="190" alt="Rubbermaid Easy Find Lids Food Storage Set - 50-piece " title="Rubbermaid Easy Find Lids Food Storage Set - 50-piece ">
+<figcaption class="cardProdTitle">
+Rubbermaid Easy Find Lids Food Storage Set - 50-piece 
+</figcaption></figure></a><div class="prodRatings">
+<a href="#"><img src="http://reviews.samsclub.com/1337/prod14280049/ratings.gif" width="60" height="12" alt="ratings"></a></div>
+<div class="promoMsgBlue">&nbsp;</div>
+<div class="prodPricingInfo"><span class="superscript">$</span>
+<span class="price">15</span>
+<span class="superscript">98</span>
+</div>
+<span class="prodOfferFlag">Free Shipping</span></div>
+</li><!-- -->
+
+<!-- --><li><div class="card cardA">
+<span class="label flag flag-orange">best seller</span>
+<a href="#" class="cardProdLink"><figure>
+<img class="cardProdImg" src="http://scene7.samsclub.com/is/image/samsclub/0087430500652_A?$img_size_190x190$" width="190" height="190" alt="LG Tone Pro Bluetooth Headset" title="LG Tone Pro Bluetooth Headset">
+<figcaption class="cardProdTitle">
+LG Tone Pro Bluetooth Headset
+</figcaption></figure></a><div class="prodRatings">
+<a href="#"><img src="http://reviews.samsclub.com/1337/prod14280049/ratings.gif" width="60" height="12" alt="ratings"></a></div>
+<div class="promoMsgBlue">Promotional message here</div>
+<div class="prodPricingInfo"><span class="superscript">$</span>
+<span class="price">59</span>
+<span class="superscript">88</span>
+</div><span class="prodPriceStrikedColor">
+<span class="prodPriceStriked">$99.99</span>
+</span><span class="prodOfferFlag">Free Shipping</span></div>
+</li><!-- -->
+
+<!-- --><li><div class="card cardA">
+<span class="label flag flag-blue">top rated</span>
+<a href="#" class="cardProdLink"><figure>
+<img class="cardProdImg" src="http://scene7.samsclub.com/is/image/samsclub/0071981207456_A?$img_size_190x190$" width="190" height="190" alt="Oxo SoftWorks Poplids – 12-Piece " title="Oxo SoftWorks Poplids – 12-Piece ">
+<figcaption class="cardProdTitle">
+Oxo SoftWorks Poplids – 12-Piece 
+</figcaption></figure></a><div class="prodRatings">
+<a href="#"><img src="http://reviews.samsclub.com/1337/prod14280049/ratings.gif" width="60" height="12" alt="ratings"></a></div>
+<div class="promoMsgBlue">Promotional message here</div>
+<div class="prodPricingInfo"><span class="superscript">$</span>
+<span class="price">79</span>
+<span class="superscript">98</span>
+</div><span class="prodPriceStrikedColor">
+<span class="prodPriceStriked">$99.98</span>
+</span><span class="prodOfferFlag">Free Shipping</span></div>
+</li><!-- -->
+
+<!-- --><li><div class="card cardA">
+<span class="label flag flag-pink">instant savings</span>
+<a href="#" class="cardProdLink"><figure>
+<img class="cardProdImg" src="http://scene7.samsclub.com/is/image/samsclub/0003600042130_A1?$img_size_190x190$" width="190" height="190" alt="Huggies Little Snugglers Diapers (Choose Your Size)" title="Huggies Little Snugglers Diapers (Choose Your Size)">
+<figcaption class="cardProdTitle">
+Huggies Little Snugglers Diapers (Choose Your Size)
+</figcaption></figure></a><div class="prodRatings">
+<a href="#"><img src="http://reviews.samsclub.com/1337/prod14280049/ratings.gif" width="60" height="12" alt="ratings"></a></div>
+<div class="promoMsgBlue">Promotional message here</div>
+<div class="prodPricingInfo"><span class="superscript">$</span>
+<span class="price">33</span>
+<span class="superscript">00</span>
+</div><span class="prodPriceStrikedColor">
+<span class="prodPriceStriked">$39.99</span>
+</span><span class="prodOfferFlag">Free Shipping</span></div>
+</li><!-- -->
+
+<!-- --><li><div class="card cardA">
+<span class="label flag flag-pink">instant savings</span>
+<a href="#" class="cardProdLink"><figure>
+<img class="cardProdImg" src="http://scene7.samsclub.com/is/image/samsclub/0081035102441_A?$img_size_190x190$" width="190" height="190" alt="MisFit Swarovski Shine Slake Set Activity &amp; Sleep Monitor" title="MisFit Swarovski Shine Slake Set Activity &amp; Sleep Monitor">
+<figcaption class="cardProdTitle">
+Fit Da Bit Swarovski Set Activity &amp; Sleep Monitor
+</figcaption></figure></a><div class="prodRatings">
+<a href="#"><img src="http://reviews.samsclub.com/1337/prod14280049/ratings.gif" width="60" height="12" alt="ratings"></a></div>
+<div class="promoMsgBlue">Promotional message here</div>
+<div class="prodPricingInfo"><span class="superscript">$</span>
+<span class="price">799</span>
+<span class="superscript">00</span>
+</div><span class="prodPriceStrikedColor">
+<span class="prodPriceStriked">$999.99</span>
+</span><span class="prodOfferFlag">Free Shipping</span></div>
+</li><!-- -->
+
+<!-- --><li><div class="card cardA">
+<span class="label flag flag-orange">best seller</span>
+<a href="#" class="cardProdLink"><figure>
+<img class="cardProdImg" src="http://scene7.samsclub.com/is/image/samsclub/0087430500652_A?$img_size_190x190$" width="190" height="190" alt="LG Tone Pro Bluetooth Headset" title="LG Tone Pro Bluetooth Headset">
+<figcaption class="cardProdTitle">
+LG Tone Pro Bluetooth Headset
+</figcaption></figure></a><div class="prodRatings">
+<a href="#"><img src="http://reviews.samsclub.com/1337/prod14280049/ratings.gif" width="60" height="12" alt="ratings"></a></div>
+<div class="promoMsgBlue">Promotional message here</div>
+<div class="prodPricingInfo"><span class="superscript">$</span>
+<span class="price">59</span>
+<span class="superscript">88</span>
+</div><span class="prodPriceStrikedColor">
+<span class="prodPriceStriked">$99.99</span>
+</span><span class="prodOfferFlag">Free Shipping</span></div>
+</li><!-- -->
+
+<!-- --><li><div class="card cardA">
+<span class="label flag flag-blue">top rated</span>
+<a href="#" class="cardProdLink"><figure>
+<img class="cardProdImg" src="http://scene7.samsclub.com/is/image/samsclub/0695231921829_A?$img_size_190x190$" width="190" height="190" alt="LG Tone Pro Bluetooth Headset" title="iBattz Battstation 12000 Portable Phone/Tablet Charger">
+<figcaption class="cardProdTitle">
+iBattz Battstation 12000 Portable Phone/Tablet
+</figcaption></figure></a><div class="prodRatings">
+<a href="#"><img src="http://reviews.samsclub.com/1337/prod14280049/ratings.gif" width="60" height="12" alt="ratings"></a></div>
+<div class="promoMsgBlue">Promotional message here</div>
+<div class="prodPricingInfo"><span class="superscript">$</span>
+<span class="price">67</span>
+<span class="superscript">88</span>
+</div><span class="prodPriceStrikedColor">
+<span class="prodPriceStriked">$87.88</span>
+</span><span class="prodOfferFlag">Free Shipping</span></div>
+</li><!-- -->
+
+<!-- --><li><div class="card cardA">
+<span class="label flag flag-pink">instant savings</span>
+<a href="#" class="cardProdLink"><figure>
+<img class="cardProdImg" src="http://scene7.samsclub.com/is/image/samsclub/0007169143748_A?$img_size_190x190$" width="190" height="190" alt="Rubbermaid Easy Find Lids Food Storage Set - 50-piece " title="Rubbermaid Easy Find Lids Food Storage Set - 50-piece ">
+<figcaption class="cardProdTitle">
+Rubbermaid Easy Find Lids Food Storage Set - 50-piece 
+</figcaption></figure></a><div class="prodRatings">
+<a href="#"><img src="http://reviews.samsclub.com/1337/prod14280049/ratings.gif" width="60" height="12" alt="ratings"></a></div>
+<div class="promoMsgBlue">&nbsp;</div>
+<div class="prodPricingInfo"><span class="superscript">$</span>
+<span class="price">15</span>
+<span class="superscript">98</span>
+</div>
+<span class="prodOfferFlag">Free Shipping</span></div>
+</li><!-- -->
+
+						</ul>
+						
+
+					</div>
+				</div>
+				<div class="scroll-Left jcarousel-prev jcarousel-control-prev inactive" data-jcarouselcontrol="true"><img src="/static/images/crsl-arrow-left.png"></div>
+				<div class="scroll-Right jcarousel-next jcarousel-control-next" data-jcarouselcontrol="true"><img src="/static/images/crsl-arrow-right.png"></div>
+			</section>
+<div class="clearfix"></div>
+
+</section>
+<div style="height: 455px;">
+<div ng-controller="CarouselController as caroCtrl" style="height: 455px;">
+	<section carousel-with-component dataprd="caroCtrl.caroFactory.items"></section>
+</div>
+</div>
+<script src="/static/js/header/carousel.js"></script>
+
 
